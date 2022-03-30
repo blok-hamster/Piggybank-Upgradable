@@ -1,0 +1,2625 @@
+{
+  "contractName": "PiggyBankDb",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "_initialized",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.11+commit.d7f03943\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"_initialized\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/PiggyBankDb.sol\":\"PiggyBankDb\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/PiggyBankDb.sol\":{\"keccak256\":\"0xe631cc6f33c0a62645afdb252e3aca0874cc5948c6d9bdcf46e709a70dcc9513\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://26505a4b0c70b617bd4441aa92d5a24af0022d940ac82b0ee84f4a61c16bde75\",\"dweb:/ipfs/QmbWgY4P1gq2SJxikmVZjG3YqEkVtwjS6PnBqRdnkEGv1z\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50610178806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80633072cf601461003b5780638da5cb5b14610059575b600080fd5b610043610077565b60405161005091906100cb565b60405180910390f35b61006161008a565b60405161006e9190610127565b60405180910390f35b600660149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008115159050919050565b6100c5816100b0565b82525050565b60006020820190506100e060008301846100bc565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610111826100e6565b9050919050565b61012181610106565b82525050565b600060208201905061013c6000830184610118565b9291505056fea264697066735822122027ed66ce59454d97a33ba5eac150a36eb8447921587c31d7a37e2c384a960fcf64736f6c634300080b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80633072cf601461003b5780638da5cb5b14610059575b600080fd5b610043610077565b60405161005091906100cb565b60405180910390f35b61006161008a565b60405161006e9190610127565b60405180910390f35b600660149054906101000a900460ff1681565b600660009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008115159050919050565b6100c5816100b0565b82525050565b60006020820190506100e060008301846100bc565b92915050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000610111826100e6565b9050919050565b61012181610106565b82525050565b600060208201905061013c6000830184610118565b9291505056fea264697066735822122027ed66ce59454d97a33ba5eac150a36eb8447921587c31d7a37e2c384a960fcf64736f6c634300080b0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [
+    {
+      "ast": {
+        "nodeType": "YulBlock",
+        "src": "0:1017:14",
+        "statements": [
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "49:48:14",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "59:32:14",
+                  "value": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "84:5:14"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "iszero",
+                          "nodeType": "YulIdentifier",
+                          "src": "77:6:14"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "77:13:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "iszero",
+                      "nodeType": "YulIdentifier",
+                      "src": "70:6:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "70:21:14"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "59:7:14"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_bool",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "31:5:14",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "41:7:14",
+                "type": ""
+              }
+            ],
+            "src": "7:90:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "162:50:14",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "179:3:14"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "199:5:14"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_bool",
+                          "nodeType": "YulIdentifier",
+                          "src": "184:14:14"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "184:21:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "172:6:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "172:34:14"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "172:34:14"
+                }
+              ]
+            },
+            "name": "abi_encode_t_bool_to_t_bool_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "150:5:14",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "157:3:14",
+                "type": ""
+              }
+            ],
+            "src": "103:109:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "310:118:14",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "320:26:14",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "332:9:14"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "343:2:14",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "328:3:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "328:18:14"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "320:4:14"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "394:6:14"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "407:9:14"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "418:1:14",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "403:3:14"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "403:17:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_bool_to_t_bool_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "356:37:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "356:65:14"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "356:65:14"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "282:9:14",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "294:6:14",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "305:4:14",
+                "type": ""
+              }
+            ],
+            "src": "218:210:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "479:81:14",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "489:65:14",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "504:5:14"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "511:42:14",
+                        "type": "",
+                        "value": "0xffffffffffffffffffffffffffffffffffffffff"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "and",
+                      "nodeType": "YulIdentifier",
+                      "src": "500:3:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "500:54:14"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "489:7:14"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_uint160",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "461:5:14",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "471:7:14",
+                "type": ""
+              }
+            ],
+            "src": "434:126:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "611:51:14",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "621:35:14",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "value",
+                        "nodeType": "YulIdentifier",
+                        "src": "650:5:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "cleanup_t_uint160",
+                      "nodeType": "YulIdentifier",
+                      "src": "632:17:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "632:24:14"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "cleaned",
+                      "nodeType": "YulIdentifier",
+                      "src": "621:7:14"
+                    }
+                  ]
+                }
+              ]
+            },
+            "name": "cleanup_t_address",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "593:5:14",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "cleaned",
+                "nodeType": "YulTypedName",
+                "src": "603:7:14",
+                "type": ""
+              }
+            ],
+            "src": "566:96:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "733:53:14",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "pos",
+                        "nodeType": "YulIdentifier",
+                        "src": "750:3:14"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "value",
+                            "nodeType": "YulIdentifier",
+                            "src": "773:5:14"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "cleanup_t_address",
+                          "nodeType": "YulIdentifier",
+                          "src": "755:17:14"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "755:24:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "mstore",
+                      "nodeType": "YulIdentifier",
+                      "src": "743:6:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "743:37:14"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "743:37:14"
+                }
+              ]
+            },
+            "name": "abi_encode_t_address_to_t_address_fromStack",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "value",
+                "nodeType": "YulTypedName",
+                "src": "721:5:14",
+                "type": ""
+              },
+              {
+                "name": "pos",
+                "nodeType": "YulTypedName",
+                "src": "728:3:14",
+                "type": ""
+              }
+            ],
+            "src": "668:118:14"
+          },
+          {
+            "body": {
+              "nodeType": "YulBlock",
+              "src": "890:124:14",
+              "statements": [
+                {
+                  "nodeType": "YulAssignment",
+                  "src": "900:26:14",
+                  "value": {
+                    "arguments": [
+                      {
+                        "name": "headStart",
+                        "nodeType": "YulIdentifier",
+                        "src": "912:9:14"
+                      },
+                      {
+                        "kind": "number",
+                        "nodeType": "YulLiteral",
+                        "src": "923:2:14",
+                        "type": "",
+                        "value": "32"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "add",
+                      "nodeType": "YulIdentifier",
+                      "src": "908:3:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "908:18:14"
+                  },
+                  "variableNames": [
+                    {
+                      "name": "tail",
+                      "nodeType": "YulIdentifier",
+                      "src": "900:4:14"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "name": "value0",
+                        "nodeType": "YulIdentifier",
+                        "src": "980:6:14"
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "name": "headStart",
+                            "nodeType": "YulIdentifier",
+                            "src": "993:9:14"
+                          },
+                          {
+                            "kind": "number",
+                            "nodeType": "YulLiteral",
+                            "src": "1004:1:14",
+                            "type": "",
+                            "value": "0"
+                          }
+                        ],
+                        "functionName": {
+                          "name": "add",
+                          "nodeType": "YulIdentifier",
+                          "src": "989:3:14"
+                        },
+                        "nodeType": "YulFunctionCall",
+                        "src": "989:17:14"
+                      }
+                    ],
+                    "functionName": {
+                      "name": "abi_encode_t_address_to_t_address_fromStack",
+                      "nodeType": "YulIdentifier",
+                      "src": "936:43:14"
+                    },
+                    "nodeType": "YulFunctionCall",
+                    "src": "936:71:14"
+                  },
+                  "nodeType": "YulExpressionStatement",
+                  "src": "936:71:14"
+                }
+              ]
+            },
+            "name": "abi_encode_tuple_t_address__to_t_address__fromStack_reversed",
+            "nodeType": "YulFunctionDefinition",
+            "parameters": [
+              {
+                "name": "headStart",
+                "nodeType": "YulTypedName",
+                "src": "862:9:14",
+                "type": ""
+              },
+              {
+                "name": "value0",
+                "nodeType": "YulTypedName",
+                "src": "874:6:14",
+                "type": ""
+              }
+            ],
+            "returnVariables": [
+              {
+                "name": "tail",
+                "nodeType": "YulTypedName",
+                "src": "885:4:14",
+                "type": ""
+              }
+            ],
+            "src": "792:222:14"
+          }
+        ]
+      },
+      "contents": "{\n\n    function cleanup_t_bool(value) -> cleaned {\n        cleaned := iszero(iszero(value))\n    }\n\n    function abi_encode_t_bool_to_t_bool_fromStack(value, pos) {\n        mstore(pos, cleanup_t_bool(value))\n    }\n\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_bool_to_t_bool_fromStack(value0,  add(headStart, 0))\n\n    }\n\n    function cleanup_t_uint160(value) -> cleaned {\n        cleaned := and(value, 0xffffffffffffffffffffffffffffffffffffffff)\n    }\n\n    function cleanup_t_address(value) -> cleaned {\n        cleaned := cleanup_t_uint160(value)\n    }\n\n    function abi_encode_t_address_to_t_address_fromStack(value, pos) {\n        mstore(pos, cleanup_t_address(value))\n    }\n\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart , value0) -> tail {\n        tail := add(headStart, 32)\n\n        abi_encode_t_address_to_t_address_fromStack(value0,  add(headStart, 0))\n\n    }\n\n}\n",
+      "id": 14,
+      "language": "Yul",
+      "name": "#utility.yul"
+    }
+  ],
+  "sourceMap": "70:1031:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "70:1031:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;783:24;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;756:20;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;783:24;;;;;;;;;;;;;:::o;756:20::-;;;;;;;;;;;;;:::o;7:90:14:-;41:7;84:5;77:13;70:21;59:32;;7:90;;;:::o;103:109::-;184:21;199:5;184:21;:::i;:::-;179:3;172:34;103:109;;:::o;218:210::-;305:4;343:2;332:9;328:18;320:26;;356:65;418:1;407:9;403:17;394:6;356:65;:::i;:::-;218:210;;;;:::o;434:126::-;471:7;511:42;504:5;500:54;489:65;;434:126;;;:::o;566:96::-;603:7;632:24;650:5;632:24;:::i;:::-;621:35;;566:96;;;:::o;668:118::-;755:24;773:5;755:24;:::i;:::-;750:3;743:37;668:118;;:::o;792:222::-;885:4;923:2;912:9;908:18;900:26;;936:71;1004:1;993:9;989:17;980:6;936:71;:::i;:::-;792:222;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.5.1 <0.8.12; \r\n\r\ncontract PiggyBankDb {\r\n\r\n    enum Lock{\r\n        ONE,\r\n        TWO,\r\n        THREE\r\n    }\r\n\r\n    mapping(address => mapping(bytes32 => uint)) tokenBalance;\r\n    mapping(bytes32 => Tokens) tokenMap;\r\n    mapping(address => mapping(bytes32 => uint)) lockedTokenBalance;\r\n    mapping(address => mapping(uint => LockFunds[])) lockedFunds;\r\n    \r\n    struct Tokens{\r\n        address tokenAddress;\r\n        bytes32 symbol;\r\n    }\r\n\r\n    struct LockFunds{\r\n        address fundOwner;\r\n        bytes32 Symbol;\r\n        uint amount;\r\n        uint startTime;\r\n        uint lockPeriod;\r\n        uint id;\r\n        Lock lockOption;\r\n    }\r\n    \r\n    bytes32[] tokenList;\r\n    uint txId;\r\n    \r\n    address public owner;\r\n    bool public _initialized;\r\n\r\n    mapping (string => uint256) _uintStorage;\r\n    mapping (string => address) _addressStorage;\r\n    mapping (string => bool) _boolStorage;\r\n    mapping (string => string) _stringStorage;\r\n    mapping (string => bytes4) _bytesStorage;\r\n    mapping (string => bytes32) _bytes32Storage;\r\n\r\n}",
+  "sourcePath": "C:\\Users\\USER\\Desktop\\Piggy_Bank_Update\\contracts\\PiggyBankDb.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/PiggyBankDb.sol",
+    "exportedSymbols": {
+      "PiggyBankDb": [
+        549
+      ]
+    },
+    "id": 550,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 465,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".1",
+          "<",
+          "0.8",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "PiggyBankDb",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 549,
+        "linearizedBaseContracts": [
+          549
+        ],
+        "name": "PiggyBankDb",
+        "nameLocation": "79:11:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PiggyBankDb.Lock",
+            "id": 469,
+            "members": [
+              {
+                "id": 466,
+                "name": "ONE",
+                "nameLocation": "120:3:2",
+                "nodeType": "EnumValue",
+                "src": "120:3:2"
+              },
+              {
+                "id": 467,
+                "name": "TWO",
+                "nameLocation": "134:3:2",
+                "nodeType": "EnumValue",
+                "src": "134:3:2"
+              },
+              {
+                "id": 468,
+                "name": "THREE",
+                "nameLocation": "148:5:2",
+                "nodeType": "EnumValue",
+                "src": "148:5:2"
+              }
+            ],
+            "name": "Lock",
+            "nameLocation": "105:4:2",
+            "nodeType": "EnumDefinition",
+            "src": "100:60:2"
+          },
+          {
+            "constant": false,
+            "id": 475,
+            "mutability": "mutable",
+            "name": "tokenBalance",
+            "nameLocation": "213:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "168:57:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 474,
+              "keyType": {
+                "id": 470,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "176:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "168:44:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 473,
+                "keyType": {
+                  "id": 471,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "187:24:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 472,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "206:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 480,
+            "mutability": "mutable",
+            "name": "tokenMap",
+            "nameLocation": "259:8:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "232:35:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Tokens_$499_storage_$",
+              "typeString": "mapping(bytes32 => struct PiggyBankDb.Tokens)"
+            },
+            "typeName": {
+              "id": 479,
+              "keyType": {
+                "id": 476,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "240:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "232:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Tokens_$499_storage_$",
+                "typeString": "mapping(bytes32 => struct PiggyBankDb.Tokens)"
+              },
+              "valueType": {
+                "id": 478,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 477,
+                  "name": "Tokens",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 499,
+                  "src": "251:6:2"
+                },
+                "referencedDeclaration": 499,
+                "src": "251:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Tokens_$499_storage_ptr",
+                  "typeString": "struct PiggyBankDb.Tokens"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 486,
+            "mutability": "mutable",
+            "name": "lockedTokenBalance",
+            "nameLocation": "319:18:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "274:63:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 485,
+              "keyType": {
+                "id": 481,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "282:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "274:44:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 484,
+                "keyType": {
+                  "id": 482,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "293:24:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 483,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "312:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 494,
+            "mutability": "mutable",
+            "name": "lockedFunds",
+            "nameLocation": "393:11:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "344:60:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$_$",
+              "typeString": "mapping(address => mapping(uint256 => struct PiggyBankDb.LockFunds[]))"
+            },
+            "typeName": {
+              "id": 493,
+              "keyType": {
+                "id": 487,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "352:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "344:48:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$_$",
+                "typeString": "mapping(address => mapping(uint256 => struct PiggyBankDb.LockFunds[]))"
+              },
+              "valueType": {
+                "id": 492,
+                "keyType": {
+                  "id": 488,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "371:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "363:28:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$",
+                  "typeString": "mapping(uint256 => struct PiggyBankDb.LockFunds[])"
+                },
+                "valueType": {
+                  "baseType": {
+                    "id": 490,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 489,
+                      "name": "LockFunds",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 515,
+                      "src": "379:9:2"
+                    },
+                    "referencedDeclaration": 515,
+                    "src": "379:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LockFunds_$515_storage_ptr",
+                      "typeString": "struct PiggyBankDb.LockFunds"
+                    }
+                  },
+                  "id": 491,
+                  "nodeType": "ArrayTypeName",
+                  "src": "379:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_ptr",
+                    "typeString": "struct PiggyBankDb.LockFunds[]"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "PiggyBankDb.Tokens",
+            "id": 499,
+            "members": [
+              {
+                "constant": false,
+                "id": 496,
+                "mutability": "mutable",
+                "name": "tokenAddress",
+                "nameLocation": "449:12:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 499,
+                "src": "441:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 495,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "441:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 498,
+                "mutability": "mutable",
+                "name": "symbol",
+                "nameLocation": "480:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 499,
+                "src": "472:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 497,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "472:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tokens",
+            "nameLocation": "424:6:2",
+            "nodeType": "StructDefinition",
+            "scope": 549,
+            "src": "417:77:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PiggyBankDb.LockFunds",
+            "id": 515,
+            "members": [
+              {
+                "constant": false,
+                "id": 501,
+                "mutability": "mutable",
+                "name": "fundOwner",
+                "nameLocation": "537:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "529:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 500,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "529:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 503,
+                "mutability": "mutable",
+                "name": "Symbol",
+                "nameLocation": "565:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "557:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 502,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "557:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 505,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "587:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "582:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 504,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 507,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "609:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "604:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 506,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "604:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 509,
+                "mutability": "mutable",
+                "name": "lockPeriod",
+                "nameLocation": "634:10:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "629:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 508,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "629:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 511,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "660:2:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "655:7:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 510,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 514,
+                "mutability": "mutable",
+                "name": "lockOption",
+                "nameLocation": "678:10:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "673:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Lock_$469",
+                  "typeString": "enum PiggyBankDb.Lock"
+                },
+                "typeName": {
+                  "id": 513,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 512,
+                    "name": "Lock",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 469,
+                    "src": "673:4:2"
+                  },
+                  "referencedDeclaration": 469,
+                  "src": "673:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Lock_$469",
+                    "typeString": "enum PiggyBankDb.Lock"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LockFunds",
+            "nameLocation": "509:9:2",
+            "nodeType": "StructDefinition",
+            "scope": 549,
+            "src": "502:194:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 518,
+            "mutability": "mutable",
+            "name": "tokenList",
+            "nameLocation": "718:9:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "708:19:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 516,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "708:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 517,
+              "nodeType": "ArrayTypeName",
+              "src": "708:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 520,
+            "mutability": "mutable",
+            "name": "txId",
+            "nameLocation": "739:4:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "734:9:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 519,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "734:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "id": 522,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "771:5:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "756:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 521,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "756:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "3072cf60",
+            "id": 524,
+            "mutability": "mutable",
+            "name": "_initialized",
+            "nameLocation": "795:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "783:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 523,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "783:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 528,
+            "mutability": "mutable",
+            "name": "_uintStorage",
+            "nameLocation": "844:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "816:40:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+              "typeString": "mapping(string => uint256)"
+            },
+            "typeName": {
+              "id": 527,
+              "keyType": {
+                "id": 525,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "825:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "816:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+                "typeString": "mapping(string => uint256)"
+              },
+              "valueType": {
+                "id": 526,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "835:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 532,
+            "mutability": "mutable",
+            "name": "_addressStorage",
+            "nameLocation": "891:15:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "863:43:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+              "typeString": "mapping(string => address)"
+            },
+            "typeName": {
+              "id": 531,
+              "keyType": {
+                "id": 529,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "872:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "863:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+                "typeString": "mapping(string => address)"
+              },
+              "valueType": {
+                "id": 530,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "882:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 536,
+            "mutability": "mutable",
+            "name": "_boolStorage",
+            "nameLocation": "938:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "913:37:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+              "typeString": "mapping(string => bool)"
+            },
+            "typeName": {
+              "id": 535,
+              "keyType": {
+                "id": 533,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "922:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "913:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                "typeString": "mapping(string => bool)"
+              },
+              "valueType": {
+                "id": 534,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "932:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 540,
+            "mutability": "mutable",
+            "name": "_stringStorage",
+            "nameLocation": "984:14:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "957:41:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
+              "typeString": "mapping(string => string)"
+            },
+            "typeName": {
+              "id": 539,
+              "keyType": {
+                "id": 537,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "966:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "957:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
+                "typeString": "mapping(string => string)"
+              },
+              "valueType": {
+                "id": 538,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "976:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 544,
+            "mutability": "mutable",
+            "name": "_bytesStorage",
+            "nameLocation": "1032:13:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "1005:40:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes4_$",
+              "typeString": "mapping(string => bytes4)"
+            },
+            "typeName": {
+              "id": 543,
+              "keyType": {
+                "id": 541,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1014:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1005:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes4_$",
+                "typeString": "mapping(string => bytes4)"
+              },
+              "valueType": {
+                "id": 542,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "1024:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 548,
+            "mutability": "mutable",
+            "name": "_bytes32Storage",
+            "nameLocation": "1080:15:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "1052:43:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes32_$",
+              "typeString": "mapping(string => bytes32)"
+            },
+            "typeName": {
+              "id": 547,
+              "keyType": {
+                "id": 545,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1061:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1052:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes32_$",
+                "typeString": "mapping(string => bytes32)"
+              },
+              "valueType": {
+                "id": 546,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1071:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 550,
+        "src": "70:1031:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1068:2"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/PiggyBankDb.sol",
+    "exportedSymbols": {
+      "PiggyBankDb": [
+        549
+      ]
+    },
+    "id": 550,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 465,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".1",
+          "<",
+          "0.8",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:32:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "PiggyBankDb",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 549,
+        "linearizedBaseContracts": [
+          549
+        ],
+        "name": "PiggyBankDb",
+        "nameLocation": "79:11:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "PiggyBankDb.Lock",
+            "id": 469,
+            "members": [
+              {
+                "id": 466,
+                "name": "ONE",
+                "nameLocation": "120:3:2",
+                "nodeType": "EnumValue",
+                "src": "120:3:2"
+              },
+              {
+                "id": 467,
+                "name": "TWO",
+                "nameLocation": "134:3:2",
+                "nodeType": "EnumValue",
+                "src": "134:3:2"
+              },
+              {
+                "id": 468,
+                "name": "THREE",
+                "nameLocation": "148:5:2",
+                "nodeType": "EnumValue",
+                "src": "148:5:2"
+              }
+            ],
+            "name": "Lock",
+            "nameLocation": "105:4:2",
+            "nodeType": "EnumDefinition",
+            "src": "100:60:2"
+          },
+          {
+            "constant": false,
+            "id": 475,
+            "mutability": "mutable",
+            "name": "tokenBalance",
+            "nameLocation": "213:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "168:57:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 474,
+              "keyType": {
+                "id": 470,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "176:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "168:44:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 473,
+                "keyType": {
+                  "id": 471,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "187:24:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 472,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "206:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 480,
+            "mutability": "mutable",
+            "name": "tokenMap",
+            "nameLocation": "259:8:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "232:35:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Tokens_$499_storage_$",
+              "typeString": "mapping(bytes32 => struct PiggyBankDb.Tokens)"
+            },
+            "typeName": {
+              "id": 479,
+              "keyType": {
+                "id": 476,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "240:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "232:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Tokens_$499_storage_$",
+                "typeString": "mapping(bytes32 => struct PiggyBankDb.Tokens)"
+              },
+              "valueType": {
+                "id": 478,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 477,
+                  "name": "Tokens",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 499,
+                  "src": "251:6:2"
+                },
+                "referencedDeclaration": 499,
+                "src": "251:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Tokens_$499_storage_ptr",
+                  "typeString": "struct PiggyBankDb.Tokens"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 486,
+            "mutability": "mutable",
+            "name": "lockedTokenBalance",
+            "nameLocation": "319:18:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "274:63:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(bytes32 => uint256))"
+            },
+            "typeName": {
+              "id": 485,
+              "keyType": {
+                "id": 481,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "282:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "274:44:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_bytes32_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(bytes32 => uint256))"
+              },
+              "valueType": {
+                "id": 484,
+                "keyType": {
+                  "id": 482,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "293:24:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_bytes32_$_t_uint256_$",
+                  "typeString": "mapping(bytes32 => uint256)"
+                },
+                "valueType": {
+                  "id": 483,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "312:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 494,
+            "mutability": "mutable",
+            "name": "lockedFunds",
+            "nameLocation": "393:11:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "344:60:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$_$",
+              "typeString": "mapping(address => mapping(uint256 => struct PiggyBankDb.LockFunds[]))"
+            },
+            "typeName": {
+              "id": 493,
+              "keyType": {
+                "id": 487,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "352:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "344:48:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$_$",
+                "typeString": "mapping(address => mapping(uint256 => struct PiggyBankDb.LockFunds[]))"
+              },
+              "valueType": {
+                "id": 492,
+                "keyType": {
+                  "id": 488,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "371:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "363:28:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_$",
+                  "typeString": "mapping(uint256 => struct PiggyBankDb.LockFunds[])"
+                },
+                "valueType": {
+                  "baseType": {
+                    "id": 490,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 489,
+                      "name": "LockFunds",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 515,
+                      "src": "379:9:2"
+                    },
+                    "referencedDeclaration": 515,
+                    "src": "379:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_LockFunds_$515_storage_ptr",
+                      "typeString": "struct PiggyBankDb.LockFunds"
+                    }
+                  },
+                  "id": 491,
+                  "nodeType": "ArrayTypeName",
+                  "src": "379:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_LockFunds_$515_storage_$dyn_storage_ptr",
+                    "typeString": "struct PiggyBankDb.LockFunds[]"
+                  }
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "canonicalName": "PiggyBankDb.Tokens",
+            "id": 499,
+            "members": [
+              {
+                "constant": false,
+                "id": 496,
+                "mutability": "mutable",
+                "name": "tokenAddress",
+                "nameLocation": "449:12:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 499,
+                "src": "441:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 495,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "441:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 498,
+                "mutability": "mutable",
+                "name": "symbol",
+                "nameLocation": "480:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 499,
+                "src": "472:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 497,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "472:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Tokens",
+            "nameLocation": "424:6:2",
+            "nodeType": "StructDefinition",
+            "scope": 549,
+            "src": "417:77:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PiggyBankDb.LockFunds",
+            "id": 515,
+            "members": [
+              {
+                "constant": false,
+                "id": 501,
+                "mutability": "mutable",
+                "name": "fundOwner",
+                "nameLocation": "537:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "529:17:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 500,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "529:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 503,
+                "mutability": "mutable",
+                "name": "Symbol",
+                "nameLocation": "565:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "557:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 502,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "557:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 505,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "587:6:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "582:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 504,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "582:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 507,
+                "mutability": "mutable",
+                "name": "startTime",
+                "nameLocation": "609:9:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "604:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 506,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "604:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 509,
+                "mutability": "mutable",
+                "name": "lockPeriod",
+                "nameLocation": "634:10:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "629:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 508,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "629:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 511,
+                "mutability": "mutable",
+                "name": "id",
+                "nameLocation": "660:2:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "655:7:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 510,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 514,
+                "mutability": "mutable",
+                "name": "lockOption",
+                "nameLocation": "678:10:2",
+                "nodeType": "VariableDeclaration",
+                "scope": 515,
+                "src": "673:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Lock_$469",
+                  "typeString": "enum PiggyBankDb.Lock"
+                },
+                "typeName": {
+                  "id": 513,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 512,
+                    "name": "Lock",
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 469,
+                    "src": "673:4:2"
+                  },
+                  "referencedDeclaration": 469,
+                  "src": "673:4:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Lock_$469",
+                    "typeString": "enum PiggyBankDb.Lock"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "LockFunds",
+            "nameLocation": "509:9:2",
+            "nodeType": "StructDefinition",
+            "scope": 549,
+            "src": "502:194:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 518,
+            "mutability": "mutable",
+            "name": "tokenList",
+            "nameLocation": "718:9:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "708:19:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_bytes32_$dyn_storage",
+              "typeString": "bytes32[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 516,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "708:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "id": 517,
+              "nodeType": "ArrayTypeName",
+              "src": "708:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                "typeString": "bytes32[]"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 520,
+            "mutability": "mutable",
+            "name": "txId",
+            "nameLocation": "739:4:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "734:9:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 519,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "734:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "functionSelector": "8da5cb5b",
+            "id": 522,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "771:5:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "756:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 521,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "756:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "3072cf60",
+            "id": 524,
+            "mutability": "mutable",
+            "name": "_initialized",
+            "nameLocation": "795:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "783:24:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 523,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "783:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 528,
+            "mutability": "mutable",
+            "name": "_uintStorage",
+            "nameLocation": "844:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "816:40:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+              "typeString": "mapping(string => uint256)"
+            },
+            "typeName": {
+              "id": 527,
+              "keyType": {
+                "id": 525,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "825:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "816:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+                "typeString": "mapping(string => uint256)"
+              },
+              "valueType": {
+                "id": 526,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "835:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 532,
+            "mutability": "mutable",
+            "name": "_addressStorage",
+            "nameLocation": "891:15:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "863:43:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+              "typeString": "mapping(string => address)"
+            },
+            "typeName": {
+              "id": 531,
+              "keyType": {
+                "id": 529,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "872:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "863:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+                "typeString": "mapping(string => address)"
+              },
+              "valueType": {
+                "id": 530,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "882:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 536,
+            "mutability": "mutable",
+            "name": "_boolStorage",
+            "nameLocation": "938:12:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "913:37:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+              "typeString": "mapping(string => bool)"
+            },
+            "typeName": {
+              "id": 535,
+              "keyType": {
+                "id": 533,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "922:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "913:24:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bool_$",
+                "typeString": "mapping(string => bool)"
+              },
+              "valueType": {
+                "id": 534,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "932:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 540,
+            "mutability": "mutable",
+            "name": "_stringStorage",
+            "nameLocation": "984:14:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "957:41:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
+              "typeString": "mapping(string => string)"
+            },
+            "typeName": {
+              "id": 539,
+              "keyType": {
+                "id": 537,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "966:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "957:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_string_storage_$",
+                "typeString": "mapping(string => string)"
+              },
+              "valueType": {
+                "id": 538,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "976:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 544,
+            "mutability": "mutable",
+            "name": "_bytesStorage",
+            "nameLocation": "1032:13:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "1005:40:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes4_$",
+              "typeString": "mapping(string => bytes4)"
+            },
+            "typeName": {
+              "id": 543,
+              "keyType": {
+                "id": 541,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1014:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1005:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes4_$",
+                "typeString": "mapping(string => bytes4)"
+              },
+              "valueType": {
+                "id": 542,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "1024:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 548,
+            "mutability": "mutable",
+            "name": "_bytes32Storage",
+            "nameLocation": "1080:15:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 549,
+            "src": "1052:43:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes32_$",
+              "typeString": "mapping(string => bytes32)"
+            },
+            "typeName": {
+              "id": 547,
+              "keyType": {
+                "id": 545,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "1061:6:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "1052:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_bytes32_$",
+                "typeString": "mapping(string => bytes32)"
+              },
+              "valueType": {
+                "id": 546,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "1071:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 550,
+        "src": "70:1031:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1068:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.11+commit.d7f03943.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-03-22T15:17:29.078Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
